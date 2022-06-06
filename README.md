@@ -1,37 +1,44 @@
-# Employment Status 1991-2001
-This syntax creates two employment status variables, one for 1991 (employ9) and one for 2001 (employ0). These variables are coded as:
+# Employment Status 
+This repository consists of two Stata .do files, one for 1991-2001 and the other for 2001-2011. For each period the syntax creates two cross-sectional employment status variables and combines them into a longitudinal employment status variable.
+
+The cross-sectional variables for 1991, 2001 and 2011 are coded:
 - 1=employed
 - 2=unemployed
-- 3=Student
-- 4=houseminders
-- 5=Other (sick, retired, other)
-	
-It then combines them into a longitudinal employment status variable for 1991-2001 (empstat9101), coded as:
-- 1=employed 91 & 01
-- 2=employed 91, unemployed 01
-- 3=employed 91, student 01
-- 4=employed 91, home minder 01
-- 5=employed 91, other 01
-- 6=unemployed 91, employed 01
-- 7=unemployed 91 & 01
-- 8=unemployed 91, student 01
-- 9=unemployed 91, home minder 01
-- 10=unemployed 91, other 01
-- 11=student 91, employed 01
-- 12=student 91, unemployed 01
-- 13=student 91, student 01
-- 14=student 91, home minder 01
-- 15=student 91, other 01
-- 16=home minder 91, employed 01
-- 17=home minder 91, unemployed 01
-- 19=home minder 91, home minder 01
-- 20=home minder 91, other 01
-- 21=other 91, employed 01
-- 22=other 91, unemployed 01
-- 23=other 91, student 01
-- 24=other 91, home minder 01
-- 25=other 91, other 01 
+- 3=student
+- 4=house minders
+- 5=other (sick, retired, other)
 
-You will need to ensure that you have the following variables in your data:
+The longitudinal variables (1991-2001 and 2001-2011) are coded:
+- 1=employed T1 & T2
+- 2=employed T1, unemployed T2
+- 3=employed T1, student T2
+- 4=employed T1, home minder T2
+- 5=employed T1, other T2
+- 6=unemployed T1, employed T2
+- 7=unemployed T1 & T2
+- 8=unemployed T1, student T2
+- 9=unemployed T1, home minder T2
+- 10=unemployed T1, other T2
+- 11=student T1, employed T2
+- 12=student T1, unemployed T2
+- 13=student T1, student T2
+- 14=student T1, home minder T2
+- 15=student T1, other T2
+- 16=home minder T1, employed T2
+- 17=home minder T1, unemployed T2
+- 19=home minder T1, home minder T2
+- 20=home minder T1, other T2
+- 21=other T1, employed T2
+- 22=other T1, unemployed T2
+- 23=other T1, student T2
+- 24=other T1, home minder T2
+- 25=other T1, other T2
+(for 1991-2001 T1=1991 and T2=2001, and for 2001-2011 T1=2001 and T2=2011).
+
+For the 1991-2001 period you will need to ensure that you have the following variables in your data:
 - econpo89 (from ME91)
 - ecop80 and ecopimp (from ME01).
+
+And for 2001-2011 you will need the variables:
+- ecop81 and ecopimp (from ME01)
+- ecop81 and ecop11_imp (from ME11).
